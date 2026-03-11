@@ -1,0 +1,78 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Unity recovery/autosave artifacts
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+
+# IDE and OS files
+/.vs/
+/.vscode/
+/.idea/
+/.fleet/
+*.DotSettings.user
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vsconfig
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Unity / Visual Studio generated files
+ExportedObj/
+.consulo/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+mono_crash.*
+
+# Build outputs and packages
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+crashlytics-build.properties
+
+# Test and Addressables artifacts
+InitTestScene*.unity*
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Visual Scripting generated data
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# Optional asset store / Rider generated plugin
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/Plugins/Editor/JetBrains*
