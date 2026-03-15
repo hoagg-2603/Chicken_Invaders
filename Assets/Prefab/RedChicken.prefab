@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3926534536260799282}
   m_Layer: 0
   m_Name: RedChicken
-  m_TagString: Chiken
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,3 +202,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChickenController
   eggPreFabs: {fileID: 3490344964224222287, guid: 45d509a1f0f32444da8254fe005512c7, type: 3}
+  score: 10
+  chickenLegPrefab: {fileID: 1652915828696042780, guid: 36a22f3ab52d58c4fb918dff871bd413, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4966562496649791972}
   - component: {fileID: 3451704699516459901}
   - component: {fileID: 6713259063961262463}
+  - component: {fileID: 8755251222901956292}
   m_Layer: 0
   m_Name: b2_0
   m_TagString: Bullet
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletScript
   speed: 20
+--- !u!114 &8755251222901956292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764158422997083793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d3fe2cf516c374fb53ad470a33df89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyIfReachD
+  distance: 0

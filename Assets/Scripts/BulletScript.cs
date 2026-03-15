@@ -15,8 +15,12 @@ public class BulletScript : MonoBehaviour
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
-    void OnBecameInvisible()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.name == "Boss")
+        {
+            BossController.instance.TakeDamage(1);
+            Destroy(gameObject);
+        }
     }
 }

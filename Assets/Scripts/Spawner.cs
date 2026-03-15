@@ -4,9 +4,16 @@ public class Swapner : MonoBehaviour
 {
     private float gridSize =1;
     private Vector3 spawnPos;
+    private int ChickenCurrent;
     [SerializeField] private GameObject chickenPrefabs;
     [SerializeField] private Transform gridChiken;
+    [SerializeField] private GameObject boss;
+    public static Swapner instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         float height = Camera.main.orthographicSize * 2;
@@ -35,9 +42,19 @@ public class Swapner : MonoBehaviour
                 spawnPos.x = spawnPos.x + gridSize;
                 GameObject chicken = Instantiate(chickenPrefabs, spawnPos, Quaternion.identity);
                 chicken.transform.parent = gridChiken;
+                ChickenCurrent++;
             }
             spawnPos.x = x;
             spawnPos.y -= gridSize;
+        }
+    }
+
+    public void DecreaChicken()
+    {
+        ChickenCurrent--;
+        if(ChickenCurrent <= 0)
+        {
+            boss.gameObject.SetActive(true);
         }
     }
 }

@@ -8,6 +8,7 @@ public class ShipController : MonoBehaviour
     [SerializeField] private int currentTierBullet;
     [SerializeField] private GameObject VFX;
     [SerializeField] private GameObject shield;
+    [SerializeField] private int ScoreOfChickenLeg;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,11 +60,16 @@ public class ShipController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
     
-        if (!shield.activeSelf && (collision.CompareTag("Chiken") || collision.CompareTag("Egg")))
+        if (!shield.activeSelf && (collision.CompareTag("Chicken") || collision.CompareTag("Egg")))
         {
             Destroy(gameObject);
         }
-        
+        else if(collision.CompareTag("Chicken leg"))
+        {
+            Destroy(collision.gameObject);
+            ScoreControlller.instance.GetScore(ScoreOfChickenLeg);
+        }
+
     }
 
     private void OnDestroy()
@@ -71,6 +77,7 @@ public class ShipController : MonoBehaviour
         if(gameObject.scene.isLoaded) {
             var vfx = Instantiate(VFX, transform.position, Quaternion.identity);
             Destroy(vfx, 1f);
+            ShipScript.Instance.SpamShip();
         }
     }
 }

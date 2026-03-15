@@ -4,6 +4,8 @@ using UnityEngine;
 public class ChickenController : MonoBehaviour
 {
     [SerializeField] private GameObject eggPreFabs;
+    [SerializeField] private int score;
+    [SerializeField] private GameObject chickenLegPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,7 +30,16 @@ public class ChickenController : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
+            ScoreControlller.instance.GetScore(score);
+            Instantiate(chickenLegPrefab, transform.position, Quaternion.identity);
+
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Swapner.instance.DecreaChicken();
     }
 }
